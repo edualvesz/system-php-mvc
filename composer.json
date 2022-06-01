@@ -1,0 +1,16 @@
+{
+    "name": "eduardo/my-receitas",
+    "type": ".",
+    "autoload": {
+        "psr-4": {
+            "Eduardo\\MyReceitas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eduardo Alves",
+            "email": "eduardo_ean@outlook.com"
+        }
+    ],
+    "require": {}
+}
