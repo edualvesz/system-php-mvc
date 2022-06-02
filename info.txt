@@ -1,0 +1,2 @@
+1- in document .htaccess in line four is the directory where the system gonna show the views,
+if the file cannot be found there, it gonna be redirect to the directory in line six.
