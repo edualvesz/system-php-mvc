@@ -1,6 +1,6 @@
 {
     "name": "eduardo/my-receitas",
-    "type": ".",
+    "type": "cms",  
     "autoload": {
         "psr-4": {
             "Eduardo\\MyReceitas\\": "src/"
