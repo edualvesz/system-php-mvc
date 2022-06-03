@@ -12,5 +12,10 @@
             "email": "eduardo_ean@outlook.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+           "app\\" : "app"
+        }
+    }
 }

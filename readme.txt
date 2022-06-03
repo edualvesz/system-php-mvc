@@ -9,5 +9,5 @@ only be allowed if have some index.php file there, otherwise will not be allowed
 gonna be redirected to the index.php in root directory.
 
 3- The file composer.json came with an empty string in line 3, searching on internet
-i found a solution that was to put a "cms" there, and it worked! this allowed me to create
+I found a solution that was to put a "cms" there, and it worked! this allowed me to create
 the vendor folder with command (composer dump) in bash terminal.
