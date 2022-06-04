@@ -6,6 +6,10 @@ class HomeController
 {
   public function __construct()
   {
-    echo 'teste 123';
+
+  }
+
+  public function index(){
+    echo 'index home';
   }
 }
