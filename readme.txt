@@ -11,3 +11,7 @@ gonna be redirected to the index.php in root directory.
 3- The file composer.json came with an empty string in line 3, searching on internet
 I found a solution that was to put a "cms" there, and it worked! this allowed me to create
 the vendor folder with command (composer dump) in bash terminal.
+
+4- The vendor folder won't be committed on github, you must to commit it only if the
+structure is finished, but when you're working in a project that goes beyond of its
+structure don't commit it.
