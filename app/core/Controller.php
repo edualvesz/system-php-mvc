@@ -10,6 +10,7 @@ class Controller
     $twig = new \Twig\Environment((new \Twig\Loader\FilesystemLoader('../app/site/view/')),
     ['debug' => false]
   );
+      $twig->addGlobal('BASE', BASE);
       echo $twig->render($view . '.twig.php', $params);
   }
 }
