@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-md-2">
             <a class="navbar-brand" href="{{BASE}}">
-              <!-- <img src="img/logo.png" alt="My Receitas"> -->
+               <!-- <img src="img/logo.png" alt="My Receitas">  -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -29,18 +29,18 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Home
+                  <a class="nav-link active" href="{{BASE}}">Home
                     <span class="visually-hidden">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="{{BASE}}categoria/">Categorias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="{{BASE}}receita/">Nova receita</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="{{BASE}}sobre">Sobre</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -54,8 +54,8 @@
                 </li>
               </ul>
               <form class="d-flex">
-                <input class="form-control me-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control me-sm-2" type="text" placeholder="Pesquisar">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Ir</button>
               </form>
             </div>
           </div>
