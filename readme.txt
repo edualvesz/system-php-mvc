@@ -14,4 +14,4 @@ the vendor folder with command (composer dump) in bash terminal.
 
 4- The vendor folder won't be committed on github, you must to commit it only if the
 structure is finished, but when you're working in a project that goes beyond of its
-structure don't commit it.
+structure don't commit it, just put it in .gitignore file.
