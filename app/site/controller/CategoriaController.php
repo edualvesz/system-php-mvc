@@ -21,4 +21,6 @@ class CategoriaController extends Controller
   public function editar(){
     $this->load('categoria/editar');
   }
+
+  /* =================================================== */
 }

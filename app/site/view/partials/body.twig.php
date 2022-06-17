@@ -64,10 +64,10 @@
     </nav>
 
   <div class="max-width">
-
     {% block body %} {% endblock %}
-
   </div>
+
+  <script src="{{BASE}}js/script.js"></script>
 
 </body>
 </html>
