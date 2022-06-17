@@ -23,4 +23,13 @@ class CategoriaController extends Controller
   }
 
   /* =================================================== */
+
+  public function insert(){
+    $titulo = filter_input(INPUT_POST, 'txtTitulo', FILTER_SANITIZE_STRING);
+    $slug = filter_input(INPUT_POST, 'txtSlug', FILTER_SANITIZE_STRING);
+
+    if(strlen($titulo) < 2 || strlen($slug) < 3){
+      return;
+    }
+  }
 }
