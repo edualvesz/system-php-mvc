@@ -7,7 +7,7 @@
  <h1>Nova Categoria</h1>
 
  <hr>
-<form action="{{BASE}}categoria/insert" onsubmit="return validar(false)">
+<form action="{{BASE}}categoria/insert" onsubmit="return validar(false);" method="POST">
   <div class="row">
     <div class="col-md-06">
       <label for="txtTitulo">Título</label>

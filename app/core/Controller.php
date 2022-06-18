@@ -13,4 +13,13 @@ class Controller
       $twig->addGlobal('BASE', BASE);
       echo $twig->render($view . '.twig.php', $params);
   }
+
+  protected function showMessage(string $titulo, string $mensagem, string $uri, int $httpCode = 200){
+    http_response_code($httpCode);
+    $this->load('partials/mensagem',[
+      'titulo' => $titulo,
+      'mensagem' => $mensagem,
+      'uri' => $uri
+    ]);
+  }
 }

@@ -29,6 +29,12 @@ class CategoriaController extends Controller
     $slug = filter_input(INPUT_POST, 'txtSlug', FILTER_SANITIZE_STRING);
 
     if(strlen($titulo) < 2 || strlen($slug) < 3){
+      $this->showMessage(
+        'Formulário inválido',
+        'Os dados fornecidos estão incompletos ou são inválidos.',
+        'categoria/adicionar',
+        '403'
+      );
       return;
     }
   }
