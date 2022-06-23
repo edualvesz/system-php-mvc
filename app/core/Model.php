@@ -47,6 +47,86 @@ class Model
     public function getLastId(){
       return $this->getConnection()->lastInsertId();
     }
+
+    public function beginTransaction(){
+      return $this->getConnection()->beginTransaction();
+    }
+
+    public function executeQueryOneRow($sql, $params = null){
+      try {
+        $stmt = $this->getConnection()->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+      } catch (PDOException $ex){
+        if($this->debug){
+          echo "<b>Error on executeQueryOneRow():</b>" .$ex->getMessage(). "</br>";
+          echo "<b>SQL: </b>" .$sql. "</br>";
+
+          echo "</br><b>Parameters: </b>";
+          print_r($params) . "</br>";
+        }
+        die();
+        return null;
+      }
+    }
+
+    public function executeQuery($sql, $params = null){
+      try {
+        $stmt = $this->getConnection()->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+      } catch (PDOException $ex){
+        if($this->debug){
+          echo "<b>Error on executeQuery(): </b>" .$ex->getMessage(). "</br>";
+          echo "<b>SQL: </b>" .$sql. "</br>";
+
+          echo "</br><b>Parameters: </b>";
+          print_r($params) . "</br>";
+        }
+        die();
+        return null;
+      }
+    }
+
+    public function executeNonQuery($sql, $params = null){
+      try {
+        $stmt = $this->getConnection()->prepare($sql);
+        return $stmt->execute($params);
+      } catch (PDOException $ex){
+        if($this->debug){
+          echo "<b>Error on executeNonQuery(): </b>" .$ex->getMessage(). "</br>";
+          echo "<b>SQL: </b>" .$sql. "</br>";
+
+          echo "</br><b>Parameters: </b>";
+          print_r($params) . "</br>";
+        }
+        die();
+        return false;
+      }
+    }
+
+    public function numberRows($sql, $params = null){
+      try {
+        $stmt = $this->getConnection()->prepare($sql);
+        $stmt->execute($params);
+
+        return $stmt->rowCount();
+
+      } catch (PDOException $ex){
+        if($this->debug){
+          echo "<b>Error on numberRows(): </b>" .$ex->getMessage(). "</br>";
+          echo "<b>SQL: </b>" .$sql. "</br>";
+
+          echo "</br><b>Parameters: </b>";
+        }
+        die();
+        return -1;
+      }
+    }
+
+    public function getDebugState(){
+      return $this->debug;
+    }
 }
 
 ?>
