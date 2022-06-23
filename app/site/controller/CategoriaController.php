@@ -32,10 +32,10 @@ class CategoriaController extends Controller
       $this->showMessage(
         'Formulário inválido',
         'Os dados fornecidos estão incompletos ou são inválidos.',
-        'categoria/adicionar',
-        '403'
+        'categoria/adicionar'
       );
       return;
     }
+    echo 'valido';
   }
 }
