@@ -7,4 +7,8 @@ function dd($p = []){
   die();
 }
 
+function redirect($url){
+  header('Location:' . $url);
+}
+
 ?>
