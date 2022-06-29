@@ -25,4 +25,21 @@ public function __construct(){
     return $this->pdo->getLastId();
     }
   }
+
+  public function lerPorId(int $categoriaId){
+    $query = 'SELECT * FROM tb_categoria WHERE id = :id';
+
+    $dr = $this->pdo->executeQueryOneRow($query, [':id' => $categoriaId]);
+
+    return $this->collection($dr);
+  }
+
+  private function collection($arr){
+    return (object)[
+      'id'     => $arr['id'] ?? null,
+      'titulo' => $arr['titulo'] ?? null,
+      'slug'   => $arr['slug'] ?? null
+    ];
+  }
+
 }

@@ -20,8 +20,10 @@ class CategoriaController extends Controller
     $this->load('categoria/adicionar');
   }
 
-  public function editar(){
-    $this->load('categoria/editar');
+  public function editar($categoriaId = 0){
+    $this->load('categoria/editar', [
+      'categoria' => $this->categoriaModel->lerPorId($categoriaId)
+    ]);
   }
 
   /* =================================================== */
